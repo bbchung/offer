@@ -30,4 +30,3 @@ int main()
     int max = FindGreatestSumofSubArray(data, 2);
     printf("%d\n", max);
 }
-
