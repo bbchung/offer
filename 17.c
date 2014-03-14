@@ -48,28 +48,27 @@ void Dump(Node* pHead)
 
 int main()
 {
-   Node n1; 
-   n1.value = 1;
-   Node n2; 
-   n2.value = 6;
-   Node n3; 
-   n3.value = 7;
+    Node n1;
+    n1.value = 1;
+    Node n2;
+    n2.value = 6;
+    Node n3;
+    n3.value = 7;
 
-   n1.next = &n2;
-   n2.next = &n3;
-   n3.next = NULL;
+    n1.next = &n2;
+    n2.next = &n3;
+    n3.next = NULL;
 
-   Node n4; 
-   n4.value = 4;
-   Node n5; 
-   n5.value = 8;
+    Node n4;
+    n4.value = 4;
+    Node n5;
+    n5.value = 8;
 
-   n4.next = &n5;
-   n5.next = NULL;
+    n4.next = &n5;
+    n5.next = NULL;
 
-   Node* pHead = MergeSortedList(NULL, &n4);
+    Node* pHead = MergeSortedList(NULL, &n4);
 
-   Dump(pHead);
-
+    Dump(pHead);
 }
 
