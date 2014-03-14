@@ -35,14 +35,14 @@ Node* FindFirstCommonNode(Node* pHead1, Node* pHead2)
 
     if (len1 > len2)
     {
-        for (int i=0; i<len1-len2;++i)
+        for (int i = 0; i < len1 - len2; ++i)
         {
             curr1 = curr1->next;
         }
     }
     else if (len2 > len1)
     {
-        for (int i=0; i<len2-len1;++i)
+        for (int i = 0; i < len2 - len1; ++i)
         {
             curr2 = curr2->next;
         }
@@ -63,22 +63,22 @@ Node* FindFirstCommonNode(Node* pHead1, Node* pHead2)
 int main()
 {
     Node n1;
-    n1.value=1;
+    n1.value = 1;
     n1.next = NULL;
     Node n2;
-    n2.value=2;
+    n2.value = 2;
     n2.next = NULL;
     Node n3;
-    n3.value=3;
+    n3.value = 3;
     n3.next = NULL;
     Node n4;
-    n4.value=4;
+    n4.value = 4;
     n4.next = NULL;
     Node n5;
-    n5.value=5;
+    n5.value = 5;
     n5.next = NULL;
     Node n6;
-    n6.value=6;
+    n6.value = 6;
     n6.next = NULL;
 
     n1.next = &n2;
