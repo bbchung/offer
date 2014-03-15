@@ -73,5 +73,4 @@ int main()
     bool has = HasSubTree(&n2, &n3);
 
     printf("%d\n", has);
-
 }

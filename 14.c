@@ -10,10 +10,10 @@ void SwapOddBeforeEven(int *pData, int len)
 
     while (1)
     {
-        if (*pBegin % 2 == 1)
+        if ((*pBegin & 1) == 1)
             pBegin++;
 
-        if (*pEnd % 2 == 0)
+        if ((*pEnd & 1) == 0)
             pEnd--;
 
         if (pBegin >= pEnd)
@@ -35,7 +35,5 @@ int main()
     SwapOddBeforeEven(data, 5);
 
     int i = 0;
-    for (i; i < 5; i++) printf("%d, ", data[i]);
-
-    printf("\n");
+    for (; i < 5; i++) printf("%d, ", data[i]);
 }
