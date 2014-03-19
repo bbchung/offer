@@ -17,27 +17,27 @@ typedef struct _ListNode
     struct _ListNode* next;
 } ListNode;
 
-ListNode* CreateSimpleLinkList()
+ListNode* CreateSimpleLinkList(int len)
 {
-    ListNode *n1 = (ListNode*) malloc(sizeof(ListNode));
-    ListNode *n2 = (ListNode*) malloc(sizeof(ListNode));
-    ListNode *n3 = (ListNode*) malloc(sizeof(ListNode));
-    ListNode *n4 = (ListNode*) malloc(sizeof(ListNode));
-    ListNode *n5 = (ListNode*) malloc(sizeof(ListNode));
+    int i =0;
+    ListNode* pHead = NULL;
+    ListNode* pTail = NULL;
+    for (; i<len;++i)
+    {
+        ListNode *n = (ListNode*) malloc(sizeof(ListNode));
+        n->value = i+1;
+        n->next = NULL;
 
-    n1->value = 1;
-    n2->value = 2;
-    n3->value = 3;
-    n4->value = 4;
-    n5->value = 5;
+        if (pHead == NULL)
+            pHead = n;
 
-    n1->next = n2;
-    n2->next = n3;
-    n3->next = n4;
-    n4->next = n5;
-    n5->next = NULL;
+        if (pTail != NULL)
+            pTail->next = n;
 
-    return n1;
+        pTail = n;
+    }
+
+    return pHead;
 }
 
 void DeleteLinkList(ListNode* pHead)

@@ -19,7 +19,7 @@ ListNode* ReverseLinkList(ListNode* pHead)
 
 int main()
 {
-    ListNode* pHead = CreateSimpleLinkList();
+    ListNode* pHead = CreateSimpleLinkList(1);
     pHead = ReverseLinkList(pHead);
     DumpLinkList(pHead);
     DeleteLinkList(pHead);
