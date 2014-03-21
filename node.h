@@ -24,7 +24,7 @@ ListNode* CreateSimpleLinkList(int len)
     ListNode* pTail = NULL;
     for (; i<len;++i)
     {
-        ListNode *n = (ListNode*) malloc(sizeof(ListNode));
+        ListNode *n = (ListNode*) calloc(1, sizeof(ListNode));
         n->value = i+1;
         n->next = NULL;
 
@@ -61,6 +61,41 @@ void DumpLinkList(ListNode* pHead)
     }
 
     printf("\n");
+}
+
+TreeNode* CreateSimpleTree()
+{
+    TreeNode* n1 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n1->value = 1;
+
+    TreeNode* n2 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n2->value = 2;
+
+    TreeNode* n3 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n3->value = 3;
+
+    TreeNode* n4 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n4->value = 4;
+
+    TreeNode* n5 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n5->value = 5;
+
+    TreeNode* n6 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n6->value = 6;
+
+    TreeNode* n7 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n7->value = 7;
+
+    n1->left = n2;
+    //n1->right = n3;
+
+    n2->left = n4;
+    n2->right = n5;
+
+    n3->left = n6;
+    n3->right = n7;
+
+    return n1;
 }
 
 #endif
