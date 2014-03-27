@@ -1,7 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 
-void RemoveDup(char* str) // in space implement
+void RemoveDupFast(char* str)
+{
+    if (str == NULL)
+        return;
+    
+    char hash[256] = {0};
+
+    char* p1 = str;
+    char* p2 = str;
+
+    while (*p2 != '\0')
+    {
+        hash[*p2]++;
+
+        if (hash[*p2] == 1)
+        {
+            *p1 = *p2;
+            p1++;
+        }
+
+        p2++;
+    }
+
+    *p1 = '\0';
+}
+
+void RemoveDup(char* str) // bad implement
 {
     if (str == NULL)
         return;
@@ -44,8 +70,8 @@ void RemoveDup(char* str) // in space implement
 
 int main()
 {
-    char str[] = "ggoogggglleeggoooodd";
-    RemoveDup(str);
+    char str[] = "hellohello";
+    RemoveDupFast(str);
 
     printf("%s\n", str);
 }
