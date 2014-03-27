@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void RemoveDup(char* str)
+void RemoveDup(char* str) // in space implement
 {
     if (str == NULL)
         return;
