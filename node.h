@@ -63,6 +63,39 @@ void DumpLinkList(ListNode* pHead)
     printf("\n");
 }
 
+TreeNode* CreateTree2()
+{
+    TreeNode* n1 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n1->value = 10;
+
+    TreeNode* n2 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n2->value = 5;
+
+    TreeNode* n3 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n3->value = 12;
+
+    TreeNode* n4 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n4->value = 4;
+
+    TreeNode* n5 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    n5->value = 7;
+
+    n1->left = n2;
+    n1->right = n3;
+
+    n2->left = n4;
+    n2->right = n5;
+
+    n4->left = NULL;
+    n4->right = NULL;
+
+    n5->left = NULL;
+    n5->right = NULL;
+
+    return n1;
+
+}
+
 TreeNode* CreateSimpleTree()
 {
     TreeNode* n1 = (TreeNode*)calloc(1, sizeof(TreeNode));
@@ -96,6 +129,20 @@ TreeNode* CreateSimpleTree()
     n3->right = n7;
 
     return n1;
+}
+
+void DeleteTree(TreeNode* pRoot)
+{
+    if (pRoot == NULL)
+        return;
+
+    if (pRoot->left != NULL)
+        DeleteTree(pRoot->left);
+    
+    if (pRoot->right != NULL)
+        DeleteTree(pRoot->right);
+
+    free(pRoot);
 }
 
 #endif
