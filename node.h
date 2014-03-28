@@ -17,6 +17,32 @@ typedef struct _ListNode
     struct _ListNode* next;
 } ListNode;
 
+ListNode* CreateCircleLinkList()
+{
+    ListNode* n1 = (ListNode*)malloc(sizeof(ListNode));
+    n1->value = 1;
+
+    ListNode* n2 = (ListNode*)malloc(sizeof(ListNode));
+    n2->value = 2;
+
+    ListNode* n3 = (ListNode*)malloc(sizeof(ListNode));
+    n3->value = 3;
+
+    ListNode* n4 = (ListNode*)malloc(sizeof(ListNode));
+    n4->value = 4;
+
+    ListNode* n5 = (ListNode*)malloc(sizeof(ListNode));
+    n5->value = 5;
+
+    n1->next = n2;
+    n2->next = n3;
+    n3->next = n4;
+    n4->next = n5;
+    n5->next = n2;
+
+    return n1;
+}
+
 ListNode* CreateSimpleLinkList(int len)
 {
     int i =0;
