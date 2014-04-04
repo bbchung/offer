@@ -43,20 +43,20 @@ char* IntToHexStr(int number)
 
     curr = number;
     if (signbit)
-        curr = - curr;
+        curr = -curr;
 
-    for (int i=0;i<len;i++)
+    for (int i = 0; i < len; i++)
     {
         int r = curr % 16;
         curr /= 16;
-        if (0 <= r && r<= 9)
+        if (0 <= r && r <= 9)
             str[i] = r + '0';
         else
-            str[i] = r-10 + 'a';
+            str[i] = r - 10 + 'a';
     }
 
     if (signbit)
-        str[len-1] = '-';
+        str[len - 1] = '-';
 
     ReverseStr(str, str + len - 1);
 
