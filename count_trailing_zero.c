@@ -1,23 +1,19 @@
 #include <stdio.h>
 
 
-int compute_traling_zeros_of_factorial(int n)
+int compute_traling_zeros_of_factorial(unsigned int n)
 {
-    return n/5;
-}
+    int count = 0;
+    int i;
 
-unsigned long long int test()
-{
-    unsigned int i;
-    unsigned long long int f=1;
-    for(i=1;i<=15;++i)
-        f *= i;
+    for (i=5; i<n; i*=5)
+        count += n/i;
 
-    return f;
+    return count;
 }
 
 int main()
 {
-    printf("%llu\n", test());
+    compute_traling_zeros_of_factorial(10);
 }
 
