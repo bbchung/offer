@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void SwapOddBeforeEven(int *pData, int len)
+void SwapOddBeforeEven(int* pData, int len)
 {
     if (NULL == pData || len == 0)
         return;
 
-    int *pBegin = pData;
-    int *pEnd = pData + len - 1;
+    int* pBegin = pData;
+    int* pEnd = pData + len - 1;
 
     while (1)
     {
@@ -30,12 +30,13 @@ void SwapOddBeforeEven(int *pData, int len)
 
 int main()
 {
-    int data[] = {1, 2, 4, 3, 5};
+    int data[] = { 1, 2, 4, 3, 5 };
 
     SwapOddBeforeEven(data, 5);
 
     int i = 0;
-    for (; i < 5; i++) printf("%d, ", data[i]);
+    for (; i < 5; i++)
+        printf("%d, ", data[i]);
 
     int x = 10;
 }
