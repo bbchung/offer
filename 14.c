@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#define HI(x) x=5
-
 void SwapOddBeforeEven(int *pData, int len)
 {
     if (NULL == pData || len == 0)
@@ -40,5 +38,4 @@ int main()
     for (; i < 5; i++) printf("%d, ", data[i]);
 
     int x = 10;
-    HI(x);
 }
