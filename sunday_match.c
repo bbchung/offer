@@ -22,9 +22,10 @@ int sunday(char *text, char *pattern)
     while (p1 + len2 <= len1)
     {
         if (!strncmp(text + p1, pattern, len2))
-        {
             return p1;
-        }
+
+        if (p1 + len2 == len1)
+            break;
 
         if (dist[text[p1 + len2]] != -1)
         {
