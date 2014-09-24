@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-void ReverseString(char* pBegin, char* pEnd)
+void ReverseString(char *pBegin, char *pEnd)
 {
     if (pBegin == NULL || pEnd == NULL)
         return;
 
-    while (pBegin < pEnd )
+    while (pBegin < pEnd)
     {
         char temp = *pBegin;
         *pBegin = *pEnd;
@@ -16,24 +16,24 @@ void ReverseString(char* pBegin, char* pEnd)
     }
 }
 
-void ReverseSentence(char* pString)
+void ReverseSentence(char *pString)
 {
     if (pString == NULL)
         return;
 
-    char* curr = pString;
+    char *curr = pString;
     while (*curr != '\0')
         curr++;
 
     ReverseString(pString, --curr);
 
     curr = pString;
-    char* pBegin = pString;
+    char *pBegin = pString;
     while (1)
     {
         if ((*curr == ' ' || *curr == '\0'))
         {
-            if  (curr > pBegin)
+            if (curr > pBegin)
             {
                 ReverseString(pBegin, --curr);
                 ++curr;

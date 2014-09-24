@@ -2,7 +2,7 @@
 
 #include "node.h"
 
-bool HasSubTree(TreeNode* pRoot1, TreeNode* pRoot2)
+bool HasSubTree(TreeNode *pRoot1, TreeNode *pRoot2)
 {
     if (pRoot1 == NULL || pRoot2 == NULL)
         return false;

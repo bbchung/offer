@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-void swap(char* a, char* b)
+void swap(char *a, char *b)
 {
     if (a == NULL || b == NULL)
         return;
-    
+
     char temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void Permutation2(char* str, char* pBegin)
+void Permutation2(char *str, char *pBegin)
 {
     if (*pBegin == '\0')
     {
@@ -18,7 +18,7 @@ void Permutation2(char* str, char* pBegin)
         return;
     }
 
-    char* curr = pBegin;
+    char *curr = pBegin;
 
     while (*curr != '\0')
     {
@@ -29,7 +29,7 @@ void Permutation2(char* str, char* pBegin)
     }
 }
 
-void Permutation(char* str)
+void Permutation(char *str)
 {
     if (str == NULL)
         return;

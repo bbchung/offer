@@ -3,13 +3,13 @@
 typedef struct _Node
 {
     int value;
-    struct _Node* left;
-    struct _Node* right;
+    struct _Node *left;
+    struct _Node *right;
 } Node;
 
-bool IsBalanced(Node* root, int* height)
+bool IsBalanced(Node *root, int *height)
 {
-    if (root == NULL) 
+    if (root == NULL)
         return true;
 
     int leftHeight = 0;
@@ -29,7 +29,7 @@ bool IsBalanced(Node* root, int* height)
 
     int diff = leftHeight - rightHeight;
 
-    if (-1 <= diff && diff <=1)
+    if (-1 <= diff && diff <= 1)
         return true;
 
     return false;
@@ -79,5 +79,4 @@ int main()
     bool balance = IsBalanced(&n1, &height);
 
     printf("%d\n", balance);
-    
 }

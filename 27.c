@@ -2,17 +2,17 @@
 struct Node
 {
     int value;
-    struct Node* left;
-    struct Node* right;
+    struct Node *left;
+    struct Node *right;
 };
 
 struct Interval
 {
-    struct Node* begin;
-    struct Node* end;
+    struct Node *begin;
+    struct Node *end;
 };
 
-struct Interval ToList(struct Node* root)
+struct Interval ToList(struct Node *root)
 {
     struct Interval interval;
 
@@ -40,8 +40,7 @@ struct Interval ToList(struct Node* root)
 }
 
 
-
-struct Node* Convert(struct Node* root)
+struct Node *Convert(struct Node *root)
 {
     if (root == NULL)
         return NULL;
@@ -50,9 +49,9 @@ struct Node* Convert(struct Node* root)
     return interval.begin;
 }
 
-void Dump(struct Node* pHead)
+void Dump(struct Node *pHead)
 {
-    struct Node* curr = pHead;
+    struct Node *curr = pHead;
     while (curr != NULL)
     {
         printf("%d ", curr->value);
@@ -62,7 +61,6 @@ void Dump(struct Node* pHead)
     }
 
     printf("\n");
-
 }
 
 int main()
@@ -93,12 +91,8 @@ int main()
     root.left = &left;
     root.right = &right;
 
-    struct Node* pHead = Convert(&root);
+    struct Node *pHead = Convert(&root);
 
     Dump(pHead);
-
-
 }
-
-
 

@@ -3,10 +3,10 @@
 typedef struct _Node
 {
     int value;
-    struct _Node* next;
+    struct _Node *next;
 } Node;
 
-Node* MergeSortedList(Node* pHead1, Node* pHead2)
+Node *MergeSortedList(Node *pHead1, Node *pHead2)
 {
     if (pHead1 == NULL && pHead2 == NULL)
     {
@@ -24,20 +24,20 @@ Node* MergeSortedList(Node* pHead1, Node* pHead2)
     {
         if (pHead1->value <= pHead2->value)
         {
-            Node* next = MergeSortedList(pHead1->next, pHead2);
+            Node *next = MergeSortedList(pHead1->next, pHead2);
             pHead1->next = next;
             return pHead1;
         }
         else
         {
-            Node* next = MergeSortedList(pHead1, pHead2->next);
+            Node *next = MergeSortedList(pHead1, pHead2->next);
             pHead2->next = next;
             return pHead2;
         }
     }
 }
 
-void Dump(Node* pHead)
+void Dump(Node *pHead)
 {
     while (pHead != NULL)
     {
@@ -67,7 +67,7 @@ int main()
     n4.next = &n5;
     n5.next = NULL;
 
-    Node* pHead = MergeSortedList(NULL, &n4);
+    Node *pHead = MergeSortedList(NULL, &n4);
 
     Dump(pHead);
 }

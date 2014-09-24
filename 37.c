@@ -3,16 +3,16 @@
 typedef struct _Node
 {
     int value;
-    struct _Node* next;
+    struct _Node *next;
 } Node;
 
-Node* FindFirstCommonNode(Node* pHead1, Node* pHead2)
+Node *FindFirstCommonNode(Node *pHead1, Node *pHead2)
 {
     if (pHead1 == NULL || pHead2 == NULL)
         return NULL;
 
-    Node* curr1 = pHead1;
-    Node* curr2 = pHead2;
+    Node *curr1 = pHead1;
+    Node *curr2 = pHead2;
 
     int len1 = 0;
     while (curr1 != NULL)
@@ -86,7 +86,7 @@ int main()
     n3.next = &n6;
     n4.next = &n3;
 
-    Node* common = FindFirstCommonNode(&n1, &n4);
+    Node *common = FindFirstCommonNode(&n1, &n4);
     if (common != NULL)
         printf("%d\n", common->value);
 }

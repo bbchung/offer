@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int FindGreatestSumofSubArray(int* pData, int count)
+int FindGreatestSumofSubArray(int *pData, int count)
 {
     if (pData == NULL || count == 0)
         return 0;
@@ -9,7 +9,7 @@ int FindGreatestSumofSubArray(int* pData, int count)
 
     int sum = 0;
 
-    for (int i=0;i<count;++i)
+    for (int i = 0; i < count; ++i)
     {
         if (sum < 0)
             sum = pData[i];
@@ -25,7 +25,7 @@ int FindGreatestSumofSubArray(int* pData, int count)
 
 int main()
 {
-    int data[] = {-1, -2};
+    int data[] = { -1, -2 };
 
     int max = FindGreatestSumofSubArray(data, 2);
     printf("%d\n", max);

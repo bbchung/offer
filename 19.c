@@ -2,12 +2,12 @@
 
 #include "node.h"
 
-void MirrorTree(TreeNode* pRoot)
+void MirrorTree(TreeNode *pRoot)
 {
     if (pRoot == NULL)
         return;
 
-    TreeNode* temp = pRoot->left;
+    TreeNode *temp = pRoot->left;
     pRoot->left = pRoot->right;
     pRoot->right = temp;
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void NthThreeBits(int* pos1, int* pos2, int* pos3, unsigned int n)
+void NthThreeBits(int *pos1, int *pos2, int *pos3, unsigned int n)
 {
     if (--n == 0)
         return;

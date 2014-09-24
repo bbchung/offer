@@ -3,16 +3,16 @@
 typedef struct _Node
 {
     int value;
-    struct _Node* left;
-    struct _Node* right;
+    struct _Node *left;
+    struct _Node *right;
 } Node;
 
 int max(int a, int b)
 {
-    return (a>b) ? a : b;
+    return (a > b) ? a : b;
 }
 
-int LengthOfBinayrTree(Node* root)
+int LengthOfBinayrTree(Node *root)
 {
     if (root == NULL)
         return 0;
@@ -63,5 +63,4 @@ int main()
     int height = LengthOfBinayrTree(&n1);
 
     printf("%d\n", height);
-
 }

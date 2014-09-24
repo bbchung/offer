@@ -9,11 +9,13 @@ void PrintContinousSequence(int number)
     while (begin <= number)
     {
         int sum = 0;
-        for (curr = begin; curr <= end; curr++) sum += curr;
+        for (curr = begin; curr <= end; curr++)
+            sum += curr;
 
         if (sum == number)
         {
-            for (int i = begin; i <= end; i++) printf("%d ", i);
+            for (int i = begin; i <= end; i++)
+                printf("%d ", i);
 
             printf("\n");
             end++;

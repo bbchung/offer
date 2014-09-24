@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-bool FindPairWithSum(int* pData, int len, int number) 
+bool FindPairWithSum(int *pData, int len, int number)
 {
     if (pData == NULL || len <= 0)
         return false;
 
-    int* pBegin = pData;
-    int* pEnd = pData + len -1;
+    int *pBegin = pData;
+    int *pEnd = pData + len - 1;
 
     while (pBegin != pEnd)
     {
@@ -30,7 +30,7 @@ bool FindPairWithSum(int* pData, int len, int number)
 
 int main()
 {
-    int data[] = {1, 2, 4, 7, 11, 15};
+    int data[] = { 1, 2, 4, 7, 11, 15 };
 
     FindPairWithSum(data, 6, 15);
 }

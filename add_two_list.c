@@ -2,17 +2,17 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-ListNode* DoAddTwoList(ListNode* pHead1, ListNode* pHead2, bool carry)
+ListNode *DoAddTwoList(ListNode *pHead1, ListNode *pHead2, bool carry)
 {
     if (pHead1 == NULL && pHead2 == NULL && !carry)
         return NULL;
 
-    ListNode* curr = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *curr = (ListNode *)malloc(sizeof(ListNode));
     curr->next = NULL;
     curr->value = 0;
 
-    ListNode* next1 = NULL;
-    ListNode* next2 = NULL;
+    ListNode *next1 = NULL;
+    ListNode *next2 = NULL;
 
     if (pHead1 != NULL)
     {
@@ -37,34 +37,34 @@ ListNode* DoAddTwoList(ListNode* pHead1, ListNode* pHead2, bool carry)
     return curr;
 }
 
-ListNode* AddTwoList(ListNode* list1, ListNode* list2)
+ListNode *AddTwoList(ListNode *list1, ListNode *list2)
 {
-    ListNode* pList = DoAddTwoList(list1, list2, false);
+    ListNode *pList = DoAddTwoList(list1, list2, false);
     return pList;
 }
 
 int main()
 {
-    ListNode* n1 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n1 = (ListNode *)malloc(sizeof(ListNode));
     n1->value = 9;
 
-    ListNode* n2 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n2 = (ListNode *)malloc(sizeof(ListNode));
     n2->value = 9;
 
-    ListNode* n3 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n3 = (ListNode *)malloc(sizeof(ListNode));
     n3->value = 4;
 
     n1->next = n2;
     n2->next = n3;
     n3->next = NULL;
 
-    ListNode* n4 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n4 = (ListNode *)malloc(sizeof(ListNode));
     n4->value = 1;
 
-    ListNode* n5 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n5 = (ListNode *)malloc(sizeof(ListNode));
     n5->value = 9;
 
-    ListNode* n6 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n6 = (ListNode *)malloc(sizeof(ListNode));
     n6->value = 9;
 
     n4->next = NULL;
@@ -72,7 +72,7 @@ int main()
     n6->next = NULL;
 
 
-    ListNode* added = AddTwoList(n1, n4);
+    ListNode *added = AddTwoList(n1, n4);
 
     DumpLinkList(added);
 }

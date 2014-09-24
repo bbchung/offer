@@ -1,12 +1,12 @@
 #include "node.h"
 
-ListNode* FindFirstCross(ListNode* pHead)
+ListNode *FindFirstCross(ListNode *pHead)
 {
     if (pHead == NULL)
         return NULL;
 
-    ListNode* p1 = pHead;
-    ListNode* p2 = pHead;
+    ListNode *p1 = pHead;
+    ListNode *p2 = pHead;
 
     do
     {
@@ -29,18 +29,18 @@ ListNode* FindFirstCross(ListNode* pHead)
     return p1;
 }
 
-ListNode* FindLoopBegin(ListNode* pHead)
+ListNode *FindLoopBegin(ListNode *pHead)
 {
     if (pHead == NULL)
         return NULL;
 
-    ListNode* cross = FindFirstCross(pHead);
+    ListNode *cross = FindFirstCross(pHead);
 
     if (cross == NULL)
         return NULL;
 
-    ListNode* p1 = pHead;
-    ListNode* p2 = cross;
+    ListNode *p1 = pHead;
+    ListNode *p2 = cross;
 
     while (p1 != p2)
     {
@@ -53,19 +53,19 @@ ListNode* FindLoopBegin(ListNode* pHead)
 
 int main()
 {
-    ListNode* n1 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n1 = (ListNode *)malloc(sizeof(ListNode));
     n1->value = 1;
 
-    ListNode* n2 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n2 = (ListNode *)malloc(sizeof(ListNode));
     n2->value = 2;
 
-    ListNode* n3 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n3 = (ListNode *)malloc(sizeof(ListNode));
     n3->value = 3;
 
-    ListNode* n4 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n4 = (ListNode *)malloc(sizeof(ListNode));
     n4->value = 4;
 
-    ListNode* n5 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n5 = (ListNode *)malloc(sizeof(ListNode));
     n5->value = 5;
 
     n1->next = n2;
@@ -74,6 +74,6 @@ int main()
     n4->next = n5;
     n5->next = n1;
 
-    ListNode* begin = FindLoopBegin(n1);
+    ListNode *begin = FindLoopBegin(n1);
     printf("%d\n", begin->value);
 }

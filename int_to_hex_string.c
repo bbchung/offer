@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ReverseStr(char* begin, char* end)
+void ReverseStr(char *begin, char *end)
 {
     if (begin == NULL || end == NULL)
         return;
@@ -17,7 +17,7 @@ void ReverseStr(char* begin, char* end)
     }
 }
 
-char* IntToHexStr(int number)
+char *IntToHexStr(int number)
 {
     bool signbit = (number < 0);
 
@@ -38,7 +38,7 @@ char* IntToHexStr(int number)
     if (signbit)
         len++;
 
-    char* str = (char*)malloc(len + 1);
+    char *str = (char *)malloc(len + 1);
     str[len] = '\0';
 
     curr = number;
@@ -65,7 +65,7 @@ char* IntToHexStr(int number)
 
 int main()
 {
-    char* str = IntToHexStr(-0xffdd11);
+    char *str = IntToHexStr(-0xffdd11);
 
     printf("%s\n", str);
 }

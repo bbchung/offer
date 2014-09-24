@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void SwapOddBeforeEven(int* pData, int len)
+void SwapOddBeforeEven(int *pData, int len)
 {
     if (NULL == pData || len == 0)
         return;
 
-    int* pBegin = pData;
-    int* pEnd = pData + len - 1;
+    int *pBegin = pData;
+    int *pEnd = pData + len - 1;
 
     while (1)
     {

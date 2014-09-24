@@ -16,8 +16,8 @@ void ReplaceSpace(char str[], int len)
 
     int len2 = len + count * 2;
 
-    char* p1 = str + len;
-    char* p2 = str + len2;
+    char *p1 = str + len;
+    char *p2 = str + len2;
 
     while (p1 != p2)
     {
@@ -37,10 +37,10 @@ void ReplaceSpace(char str[], int len)
     }
 }
 
-int main() 
+int main()
 {
     char str[100] = "we are happy";
-    
+
     ReplaceSpace(str, 12);
 
     printf("%s\n", str);
