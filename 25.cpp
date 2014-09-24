@@ -2,18 +2,18 @@
 
 #include "node.h"
 
-void PrintPath(std::list<int>* path)
+void PrintPath(std::list<int> *path)
 {
     if (path == NULL)
         return;
 
-     for (std::list<int>::iterator it=path->begin(); it != path->end(); ++it)
-         printf("%d ", (*it));
+    for (std::list<int>::iterator it = path->begin(); it != path->end(); ++it)
+        printf("%d ", (*it));
 
-     printf("\n");
+    printf("\n");
 }
 
-void FindPath(TreeNode* pRoot, std::list<int>* path, int* sum, int number)
+void FindPath(TreeNode *pRoot, std::list<int> *path, int *sum, int number)
 {
     if (pRoot == NULL || path == NULL || sum == NULL)
         return;
@@ -35,7 +35,7 @@ void FindPath(TreeNode* pRoot, std::list<int>* path, int* sum, int number)
 
 int main()
 {
-    TreeNode* root = CreateTree2();
+    TreeNode *root = CreateTree2();
     std::list<int> list;
     int sum = 0;
     FindPath(root, &list, &sum, 22);

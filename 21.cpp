@@ -3,20 +3,25 @@
 struct Node
 {
     int value;
-    Node* next;
-    Node* prev;
+    Node *next;
+    Node *prev;
 };
 
 class Stack
 {
 public:
-    Stack() : pListHead(nullptr) {}
+    Stack()
+        : pListHead(nullptr)
+    {
+    }
 
-    virtual ~Stack() {}
+    virtual ~Stack()
+    {
+    }
 
     void PrintAll()
     {
-        Node* curr = pListHead;
+        Node *curr = pListHead;
 
         while (curr != nullptr)
         {
@@ -29,7 +34,7 @@ public:
 
     void Push(int val)
     {
-        Node* node = new Node;
+        Node *node = new Node;
         node->value = val;
         node->next = nullptr;
         node->prev = nullptr;
@@ -43,14 +48,14 @@ public:
         pListHead = node;
     }
 
-    bool Pop(int& retval)
+    bool Pop(int &retval)
     {
         if (pListHead == nullptr)
             return false;
 
         retval = pListHead->value;
 
-        Node* last = pListHead;
+        Node *last = pListHead;
 
         pListHead = pListHead->prev;
 
@@ -62,7 +67,7 @@ public:
         return true;
     }
 
-    bool Top(int& retval)
+    bool Top(int &retval)
     {
         if (pListHead == nullptr)
             return false;
@@ -73,14 +78,18 @@ public:
     }
 
 private:
-    Node* pListHead;
+    Node *pListHead;
 };
 
 class MinStack
 {
 public:
-    MinStack() {}
-    virtual ~MinStack() {}
+    MinStack()
+    {
+    }
+    virtual ~MinStack()
+    {
+    }
 
     void Push(int val)
     {
@@ -95,7 +104,7 @@ public:
             m_min.Push(top);
     }
 
-    bool Pop(int& val)
+    bool Pop(int &val)
     {
         bool succ = m_data.Pop(val);
         int top;
@@ -104,8 +113,10 @@ public:
         return succ;
     }
 
-    bool Min(int& value)  // O(1) required
-    { return m_min.Top(value); }
+    bool Min(int &value) // O(1) required
+    {
+        return m_min.Top(value);
+    }
 
 private:
     /* data */

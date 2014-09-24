@@ -7,31 +7,31 @@
 typedef struct _TreeNode
 {
     int value;
-    struct _TreeNode* left;
-    struct _TreeNode* right;
+    struct _TreeNode *left;
+    struct _TreeNode *right;
 } TreeNode;
 
 typedef struct _ListNode
 {
     int value;
-    struct _ListNode* next;
+    struct _ListNode *next;
 } ListNode;
 
-ListNode* CreateCircleLinkList()
+ListNode *CreateCircleLinkList()
 {
-    ListNode* n1 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n1 = (ListNode *)malloc(sizeof(ListNode));
     n1->value = 1;
 
-    ListNode* n2 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n2 = (ListNode *)malloc(sizeof(ListNode));
     n2->value = 2;
 
-    ListNode* n3 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n3 = (ListNode *)malloc(sizeof(ListNode));
     n3->value = 3;
 
-    ListNode* n4 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n4 = (ListNode *)malloc(sizeof(ListNode));
     n4->value = 4;
 
-    ListNode* n5 = (ListNode*)malloc(sizeof(ListNode));
+    ListNode *n5 = (ListNode *)malloc(sizeof(ListNode));
     n5->value = 5;
 
     n1->next = n2;
@@ -43,15 +43,15 @@ ListNode* CreateCircleLinkList()
     return n1;
 }
 
-ListNode* CreateSimpleLinkList(int len)
+ListNode *CreateSimpleLinkList(int len)
 {
-    int i =0;
-    ListNode* pHead = NULL;
-    ListNode* pTail = NULL;
-    for (; i<len;++i)
+    int i = 0;
+    ListNode *pHead = NULL;
+    ListNode *pTail = NULL;
+    for (; i < len; ++i)
     {
-        ListNode *n = (ListNode*) calloc(1, sizeof(ListNode));
-        n->value = i+1;
+        ListNode *n = (ListNode *)calloc(1, sizeof(ListNode));
+        n->value = i + 1;
         n->next = NULL;
 
         if (pHead == NULL)
@@ -66,20 +66,20 @@ ListNode* CreateSimpleLinkList(int len)
     return pHead;
 }
 
-void DeleteLinkList(ListNode* pHead)
+void DeleteLinkList(ListNode *pHead)
 {
-    ListNode* curr = pHead;
+    ListNode *curr = pHead;
     while (curr != NULL)
     {
-        ListNode* next = curr->next;
+        ListNode *next = curr->next;
         free(curr);
         curr = next;
     }
 }
 
-void DumpLinkList(ListNode* pHead)
+void DumpLinkList(ListNode *pHead)
 {
-    ListNode* curr = pHead;
+    ListNode *curr = pHead;
     while (curr != NULL)
     {
         printf("%d ", curr->value);
@@ -89,21 +89,21 @@ void DumpLinkList(ListNode* pHead)
     printf("\n");
 }
 
-TreeNode* CreateTree2()
+TreeNode *CreateTree2()
 {
-    TreeNode* n1 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n1 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n1->value = 10;
 
-    TreeNode* n2 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n2 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n2->value = 5;
 
-    TreeNode* n3 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n3 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n3->value = 12;
 
-    TreeNode* n4 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n4 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n4->value = 4;
 
-    TreeNode* n5 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n5 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n5->value = 7;
 
     n1->left = n2;
@@ -119,30 +119,29 @@ TreeNode* CreateTree2()
     n5->right = NULL;
 
     return n1;
-
 }
 
-TreeNode* CreateSimpleTree()
+TreeNode *CreateSimpleTree()
 {
-    TreeNode* n1 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n1 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n1->value = 1;
 
-    TreeNode* n2 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n2 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n2->value = 2;
 
-    TreeNode* n3 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n3 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n3->value = 3;
 
-    TreeNode* n4 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n4 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n4->value = 4;
 
-    TreeNode* n5 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n5 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n5->value = 5;
 
-    TreeNode* n6 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n6 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n6->value = 6;
 
-    TreeNode* n7 = (TreeNode*)calloc(1, sizeof(TreeNode));
+    TreeNode *n7 = (TreeNode *)calloc(1, sizeof(TreeNode));
     n7->value = 7;
 
     n1->left = n2;
@@ -157,14 +156,14 @@ TreeNode* CreateSimpleTree()
     return n1;
 }
 
-void DeleteTree(TreeNode* pRoot)
+void DeleteTree(TreeNode *pRoot)
 {
     if (pRoot == NULL)
         return;
 
     if (pRoot->left != NULL)
         DeleteTree(pRoot->left);
-    
+
     if (pRoot->right != NULL)
         DeleteTree(pRoot->right);
 

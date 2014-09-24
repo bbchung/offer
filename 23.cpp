@@ -1,14 +1,14 @@
 #include <queue>
 #include "node.h"
 
-void bfs(std::queue<TreeNode*>* helper)
+void bfs(std::queue<TreeNode *> *helper)
 {
     if (helper == NULL)
         return;
 
     while (!helper->empty())
     {
-        TreeNode* front = helper->front();
+        TreeNode *front = helper->front();
         printf("%d ", front->value);
 
         if (front->left != NULL)
@@ -23,12 +23,12 @@ void bfs(std::queue<TreeNode*>* helper)
     printf("\n");
 }
 
-void bfs(TreeNode* pRoot)
+void bfs(TreeNode *pRoot)
 {
     if (pRoot == NULL)
         return;
 
-    std::queue<TreeNode*> helper;
+    std::queue<TreeNode *> helper;
     helper.push(pRoot);
     bfs(&helper);
 }
@@ -36,6 +36,6 @@ void bfs(TreeNode* pRoot)
 
 int main()
 {
-    TreeNode* pRoot = CreateSimpleTree();
+    TreeNode *pRoot = CreateSimpleTree();
     bfs(pRoot);
 }
