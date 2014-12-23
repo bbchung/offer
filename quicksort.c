@@ -8,7 +8,7 @@ int swap(int *data, int len)
 
     while (j > i)
     {
-        if (data[j] < p && data[i] > p)
+        if (data[j] <= p && data[i] >= p)
         {
             int tmp = data[j];
             data[j] = data[i];
@@ -21,13 +21,21 @@ int swap(int *data, int len)
         if (data[i] <= p)
             i++;
     }
-    printf("%d\n", data[0]);
 
-    int tmp = data[0];
-    data[0] = data[j];
-    data[j] = tmp;
+    if (data[0] > data[j])
+    {
+        int tmp = data[0];
+        data[0] = data[j];
+        data[j] = tmp;
+        printf("%d\n", j);
+        return j;
+    }
+    else
+    {
+        return 0;
+    }
+
     
-    return j;
 }
 
 void qsort(int *data, int len)
@@ -50,7 +58,7 @@ void dump(int *data, int len)
 
 int main()
 {
-    int data[] = {3, 2, 4, 5, 1, 9, 0};
+    int data[] = {1, 2, 4, 5, 1};
     int len = sizeof(data)/sizeof(int);
 
     dump(data, len);
