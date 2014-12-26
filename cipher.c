@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 
-#define TOBYTE(X) X == '1'
+#define TOBYTE(X) (X == '1')
 
 int main()
 {
@@ -13,25 +13,26 @@ int main()
     scanf("%d", &N);
     scanf("%d", &K);
 
-    char buf[N + K];
-    scanf("%s", buf);
+    char C[N + K];
+    scanf("%s", C);
 
+    char P[N + 1];
+    memset(P, 0, N+1);
 
-    char bit[N + K];
-    memset(bit, 0, N + K);
+    P[0] = TOBYTE(C[0]);
 
-    for (int i = K - 1; i < N + K - 1; ++i)
+    for (int i=1;i<N;++i)
     {
-        for (int j = i - (K - 1); j < i; ++j)
-            bit[i] ^= bit[j];
+        P[i] = TOBYTE(C[i]) ^ TOBYTE(C[i-1]);
 
-        bit[i] ^= TOBYTE(buf[i - (K - 1)]);
+        if (i >= K)
+            P[i] ^= P[i-K];
     }
 
-    for (int i = K - 1; i < N + K - 1; ++i)
-        bit[i] += '0';
+    for (int i=0;i<N;++i)
+        P[i] += '0';
 
-    printf("%s\n", bit + K - 1);
+    printf("%s\n", P);
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
