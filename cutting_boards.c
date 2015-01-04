@@ -74,7 +74,7 @@ int main()
                     }
                     else
                     {
-                        S[SI][C[SI]] = MIN(A1[m] + ((C[SI] >= C[(j+1)%2]) ? S[(j+1)%2][C[SI]]+S1[n] : 111111111), A2[n] + ((C[SI] > 0) ? S[(j+1)%2][C[SI]-1] : 1111111) + S2[m]);
+                        S[SI][C[SI]] = MIN(A1[m] + ((C[SI] >= C[(j+1)%2]) ? S[(j+1)%2][C[SI]]+S2[n] : 111111111), A2[n] + ((C[SI] > 0) ? S[(j+1)%2][C[SI]-1] : 1111111) + S1[m]);
                     }
 
                     C[SI]++;
@@ -91,7 +91,7 @@ int main()
         /*W(m, n)
          * 2 * min(S1[m], S2[n]) + max(S1[m], S2[n]), if m == 0 or n == 0
          * or
-         * min(A1[m] + W(m-1, n) + S1[n], A2[n] + W(m, n-1) + S2[m])
+         * min(A1[m] + W(m-1, n) + S2[n], A2[n] + W(m, n-1) + S1[m])
          */
     }
 
