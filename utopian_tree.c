@@ -3,7 +3,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
 
     int T;
     scanf("%d", &T);
@@ -27,8 +28,7 @@ int main() {
         }
 
         printf("%d\n", h);
-        
     }
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
 }
