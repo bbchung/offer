@@ -40,7 +40,7 @@ int main()
         {
             SI = j % 2;
             int LSI = (j + 1) % 2;
-            memset(S[SI], 0, 1000*sizeof(unsigned int));
+            memset(S[SI], 0, 1000 * sizeof(unsigned int));
 
             unsigned int r = UINT_MAX;
             for (int k = 0; k < M; ++k)
