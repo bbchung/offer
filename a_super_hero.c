@@ -2,7 +2,6 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-#include <limits.h>
 
 int main()
 {
@@ -24,13 +23,6 @@ int main()
                 scanf("%u", &P[j][k]);
             }
         }
-        for (int j = 0; j < N; ++j)
-        {
-            for (int k = 0; k < M; ++k)
-            {
-                scanf("%u", &B[j][k]);
-            }
-        }
 
         // Start here
 
@@ -40,11 +32,13 @@ int main()
         {
             SI = j % 2;
             int LSI = (j + 1) % 2;
-            memset(S[SI], 0, 1000*sizeof(unsigned int));
+            memset(S[SI], 0, 1000 * sizeof(unsigned int));
 
-            unsigned int r = UINT_MAX;
+            unsigned int r = 0;
             for (int k = 0; k < M; ++k)
             {
+                scanf("%u", &B[j][k]);
+
                 unsigned int s; // spend
                 if (j == 0)
                 {
@@ -52,7 +46,7 @@ int main()
                 }
                 else
                 {
-                    s = UINT_MAX;
+                    s = 0;
                     for (int l = 0; l < 1000; ++l)
                     {
                         if (S[LSI][l] == 0)
@@ -63,7 +57,7 @@ int main()
                             need = 0;
 
                         unsigned c = S[LSI][l] + need;
-                        if (c < s)
+                        if (c < s || s == 0)
                             s = c;
                     }
                 }
@@ -73,7 +67,7 @@ int main()
 
                 if (j == N - 1)
                 {
-                    if (s <= r)
+                    if (s <= r || r == 0)
                         r = s;
                 }
             }
