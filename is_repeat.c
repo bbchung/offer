@@ -12,12 +12,12 @@ int is_repeat(char *A)
         if (A[i] == A[p])
         {
             if (len > 0)
-                p = (p+1) % len;
+                p = (p + 1) % len;
         }
         else
         {
-            len = i+1;
-            p=0;
+            len = i + 1;
+            p = 0;
         }
 
         if (len == 0)

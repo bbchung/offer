@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-#include <queue> 
+#include <queue>
 
 int diff_len(char *p, char *q, int M)
 {
@@ -50,7 +50,7 @@ int diff_len(char *p, char *q, int M)
 
 int main()
 {
-//    diff_len("abc", "bc", 0);
+    //    diff_len("abc", "bc", 0);
 
     int T;
     scanf("%d", &T);
@@ -67,11 +67,11 @@ int main()
 
         int ans = 0;
 
-        int j=0;
+        int j = 0;
 
         while (Q[j] != '\0')
         {
-            int v = diff_len(P, Q+j, S);
+            int v = diff_len(P, Q + j, S);
 
             if (v >= ans)
                 ans = v;
@@ -79,10 +79,10 @@ int main()
             ++j;
         }
 
-        j=1;
+        j = 1;
         while (P[j] != '\0')
         {
-            int v = diff_len(Q, P+j, S);
+            int v = diff_len(Q, P + j, S);
 
             if (v >= ans)
                 ans = v;

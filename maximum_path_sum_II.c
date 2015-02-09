@@ -15,12 +15,12 @@ int main()
         int N;
         scanf("%d", &N);
         int s[2][N];
-        int max=0;
+        int max = 0;
 
         for (int j = 0; j <= N; ++j)
         {
             int si = j % 2;
-            int lsi= (j+1) % 2;
+            int lsi = (j + 1) % 2;
             for (int k = 0; k <= N; ++k)
             {
                 if (j == 0 || k == 0 || k > j)
@@ -28,11 +28,11 @@ int main()
                     s[si][k] = 0;
                     continue;
                 }
-                
+
                 int V;
                 scanf("%d", &V);
 
-                s[si][k] = MAX(s[lsi][k-1], s[lsi][k]) + V;
+                s[si][k] = MAX(s[lsi][k - 1], s[lsi][k]) + V;
 
                 if (s[si][k] > max)
                     max = s[si][k];

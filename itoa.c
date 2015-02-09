@@ -3,7 +3,7 @@
 
 int count_digit(int number)
 {
-    int len=0;
+    int len = 0;
     int q = number;
     while (1)
     {
@@ -22,7 +22,7 @@ int count_digit(int number)
 
 char *itoa(int number)
 {
-    int len = count_digit(number) + 1;    
+    int len = count_digit(number) + 1;
 
     char *buf = malloc(len);
     buf[len - 1] = 0;
@@ -34,14 +34,13 @@ char *itoa(int number)
         number = -number;
     }
 
-    while (1) 
+    while (1)
     {
         buf[i] = number % 10 + '0';
-        number = number/10; 
+        number = number / 10;
         i--;
         if (number == 0)
             break;
-
     }
 
     return buf;

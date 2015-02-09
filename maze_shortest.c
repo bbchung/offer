@@ -18,26 +18,26 @@ void maze_go(int M[5][5], Record record[5][5], int x, int y, int from_x, int fro
 
     printf("record[%d][%d] step = %d, from_x=%d, from_y=%d\n", x, y, record[from_x][from_y].step + 1, from_x, from_y);
 
-    if (x-1 >=0 && M[x-1][y] == 0 && record[x][y].step + 1 < record[x-1][y].step)
-        maze_go(M, record, x-1, y, x, y);
+    if (x - 1 >= 0 && M[x - 1][y] == 0 && record[x][y].step + 1 < record[x - 1][y].step)
+        maze_go(M, record, x - 1, y, x, y);
 
-    if (y-1 >=0 && M[x][y-1] == 0 && record[x][y].step + 1 < record[x][y-1].step)
-        maze_go(M, record, x, y-1, x, y);
+    if (y - 1 >= 0 && M[x][y - 1] == 0 && record[x][y].step + 1 < record[x][y - 1].step)
+        maze_go(M, record, x, y - 1, x, y);
 
-    if (x+1 <5 && M[x+1][y] == 0 && record[x][y].step + 1 < record[x+1][y].step)
-        maze_go(M, record, x+1, y, x, y);
+    if (x + 1 < 5 && M[x + 1][y] == 0 && record[x][y].step + 1 < record[x + 1][y].step)
+        maze_go(M, record, x + 1, y, x, y);
 
-    if (y+1<5 && M[x][y+1] == 0 && record[x][y].step + 1 < record[x][y+1].step)
-        maze_go(M, record, x, y+1, x, y);
+    if (y + 1 < 5 && M[x][y + 1] == 0 && record[x][y].step + 1 < record[x][y + 1].step)
+        maze_go(M, record, x, y + 1, x, y);
 }
 
 
 int main()
 {
     Record record[5][5];
-    for (int i=0;i<5;++i)
+    for (int i = 0; i < 5; ++i)
     {
-        for (int j=0;j<5;++j)
+        for (int j = 0; j < 5; ++j)
         {
             record[i][j].step = 9999;
             record[i][j].from_x = -1;
@@ -56,7 +56,7 @@ int main()
     maze_go(M, record, 4, 4, 4, 4);
 
 
-    int x=0,y=0;
+    int x = 0, y = 0;
 
 
     while (x != 4 || y != 4)

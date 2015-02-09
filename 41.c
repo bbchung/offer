@@ -30,7 +30,7 @@ bool FindPairWithSum(int *pData, int len, int number)
 
 int main()
 {
-    int data[] = { 1, 2, 4, 7, 11, 15 };
+    int data[] = {1, 2, 4, 7, 11, 15};
 
     FindPairWithSum(data, 6, 15);
 }

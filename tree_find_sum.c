@@ -38,4 +38,3 @@ int main()
     TreeNode *tree = CreateSimpleTree();
     find_sum(tree, 3, NULL, 0);
 }
-

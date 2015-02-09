@@ -87,7 +87,7 @@ int CountNumberK(int *pData, int len, int number)
 
 int main()
 {
-    int data[] = { 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6 };
+    int data[] = {1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6};
 
     int count = CountNumberK(data, 13, 9);
     //    int min = FindMinPos(data, 13, 0, 12, 1);

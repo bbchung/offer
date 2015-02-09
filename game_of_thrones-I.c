@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
- 
+
 void findPalind(char *arr)
 {
     int rc[26] = {0};
@@ -11,12 +11,12 @@ void findPalind(char *arr)
 
     int r = 0;
     for (int i = 0; i < len; ++i)
-        rc[arr[i]-'a']++;
+        rc[arr[i] - 'a']++;
 
     char flag = 0;
     for (int i = 0; i < 26; ++i)
     {
-        if (rc[i] %2 !=0)
+        if (rc[i] % 2 != 0)
         {
             if (flag)
             {
@@ -32,11 +32,11 @@ void findPalind(char *arr)
 
     printf("YES\n");
 }
-int main() {
+int main()
+{
 
     char arr[100001];
-    scanf("%s",arr);
+    scanf("%s", arr);
     findPalind(arr);
     return 0;
 }
-

@@ -17,19 +17,19 @@ int main()
     scanf("%s", CT);
 
     char PT[N + 1];
-    memset(PT, 0, N+1);
+    memset(PT, 0, N + 1);
 
     PT[0] = TOBYTE(CT[0]);
 
-    for (int i=1;i<N;++i)
+    for (int i = 1; i < N; ++i)
     {
-        PT[i] = TOBYTE(CT[i]) ^ TOBYTE(CT[i-1]);
+        PT[i] = TOBYTE(CT[i]) ^ TOBYTE(CT[i - 1]);
 
         if (i >= K)
-            PT[i] ^= PT[i-K];
+            PT[i] ^= PT[i - K];
     }
 
-    for (int i=0;i<N;++i)
+    for (int i = 0; i < N; ++i)
         PT[i] += '0';
 
     printf("%s\n", PT);

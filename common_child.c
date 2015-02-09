@@ -29,7 +29,7 @@ int main()
             }
             else
             {
-                S[SI][j] = MAX(S[SI][j-1], S[LSI][j]);
+                S[SI][j] = MAX(S[SI][j - 1], S[LSI][j]);
             }
         }
     }

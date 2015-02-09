@@ -3,7 +3,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
 
     int N;
     scanf("%d", &N);
@@ -22,25 +23,23 @@ int main() {
         }
 
         int r[26] = {0};
-        
-        for (int j = 0; j < len/2; ++j)
-            r[buf[j]-'a']++;
 
-        for (int j = len/2; j < len; ++j)
-            r[buf[j]-'a']--;
+        for (int j = 0; j < len / 2; ++j)
+            r[buf[j] - 'a']++;
+
+        for (int j = len / 2; j < len; ++j)
+            r[buf[j] - 'a']--;
 
 
-        int count=0;
-        for (int j = 0; j  < 26; ++j )
+        int count = 0;
+        for (int j = 0; j < 26; ++j)
         {
             if (r[j] > 0)
-                count+=r[j];
+                count += r[j];
         }
 
         printf("%d\n", count);
-
     }
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
 }
-

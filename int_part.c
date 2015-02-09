@@ -21,7 +21,7 @@ void part(int n, int max, int *path, int len)
         for (int i = max; i >= 1; --i)
         {
             path[len] = i;
-            part(n-i, i, path, len+1);
+            part(n - i, i, path, len + 1);
         }
     }
 }

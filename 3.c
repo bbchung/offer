@@ -30,7 +30,7 @@ bool Find(int *matrix, int row, int col, int num)
 
 int main()
 {
-    int data[4][4] = { { 1, 2, 8, 9 }, { 2, 4, 9, 12 }, { 4, 7, 10, 13 }, { 6, 8, 11, 15 } };
+    int data[4][4] = {{1, 2, 8, 9}, {2, 4, 9, 12}, {4, 7, 10, 13}, {6, 8, 11, 15}};
 
 
     bool found = Find((int *)data, 4, 4, 0);

@@ -11,7 +11,7 @@ void remove_dup_char(char *src)
 
     int p1 = 0;
 
-    for (int i=0;i<len;++i)
+    for (int i = 0; i < len; ++i)
     {
         dup[src[i]]++;
 
@@ -30,5 +30,4 @@ int main()
     char text[256] = "abcadxyzcuz";
     remove_dup_char(text);
     printf("%s\n", text);
-
 }

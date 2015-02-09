@@ -30,7 +30,7 @@ void SwapOddBeforeEven(int *pData, int len)
 
 int main()
 {
-    int data[] = { 1, 2, 4, 3, 5 };
+    int data[] = {1, 2, 4, 3, 5};
 
     SwapOddBeforeEven(data, 5);
 

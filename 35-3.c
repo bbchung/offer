@@ -6,7 +6,7 @@ void RemoveDupFast(char *str)
     if (str == NULL)
         return;
 
-    char hash[256] = { 0 };
+    char hash[256] = {0};
 
     char *p1 = str;
     char *p2 = str;
@@ -39,7 +39,7 @@ void RemoveDup(char *str) // bad implement
 
     len = i;
 
-    char hash[256] = { 0 };
+    char hash[256] = {0};
     for (i = 0; i < len; ++i)
         hash[str[i]]++;
 

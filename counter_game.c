@@ -5,12 +5,12 @@
 
 int Count(unsigned long long int n, unsigned long long int *last)
 {
-    int c=0;
+    int c = 0;
 
     while (n != 0)
     {
         c++;
-        n = n & (n-1);
+        n = n & (n - 1);
 
         if (n != 0)
             *last = n;
@@ -30,7 +30,7 @@ int main()
     {
         unsigned long long int N;
         scanf("%llu", &N);
-        int count=0;
+        int count = 0;
 
         while (N != 1)
         {
@@ -54,7 +54,6 @@ int main()
         else
             printf("Louise\n");
     }
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
 }
-

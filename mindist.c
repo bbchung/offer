@@ -33,8 +33,8 @@ int min_dist(int *arr1, int len1, int *arr2, int len2)
 
 int main()
 {
-    int arr1[] = { 1, 6, 7 };
-    int arr2[] = { 4, 8, 9 };
+    int arr1[] = {1, 6, 7};
+    int arr2[] = {4, 8, 9};
     int diff = min_dist(arr1, 3, arr2, 3);
     printf("%d\n", diff);
 }

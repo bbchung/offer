@@ -16,4 +16,3 @@ int main()
 {
     compute_traling_zeros_of_factorial(10);
 }
-

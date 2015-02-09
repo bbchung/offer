@@ -13,15 +13,15 @@ int batoi(char *binary)
     return value;
 }
 
-char* itoba(int v, int len)
+char *itoba(int v, int len)
 {
-    char *buf = malloc(len+1);
+    char *buf = malloc(len + 1);
     buf[len] = 0;
 
     for (int i = 0; i < len; ++i)
     {
-        buf[len-1-i] = (v & 1) + '0';
-//        printf("buf[%d] = %c\n", len-1-i, (v & 1) + '0');
+        buf[len - 1 - i] = (v & 1) + '0';
+        //        printf("buf[%d] = %c\n", len-1-i, (v & 1) + '0');
         v >>= 1;
     }
 
@@ -48,7 +48,7 @@ int main()
     char cmd[10] = {0};
 
     int retval = 0;
-    int len=0;
+    int len = 0;
 
     for (int i = 0; i < Q; ++i)
     {

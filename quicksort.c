@@ -34,8 +34,6 @@ int swap(int *data, int len)
     {
         return 0;
     }
-
-    
 }
 
 void qsort(int *data, int len)
@@ -50,7 +48,7 @@ void qsort(int *data, int len)
 
 void dump(int *data, int len)
 {
-    for (int i=0;i<len;i++)
+    for (int i = 0; i < len; i++)
         printf("%d ", data[i]);
 
     printf("\n");
@@ -59,7 +57,7 @@ void dump(int *data, int len)
 int main()
 {
     int data[] = {1, 2, 4, 5, 1};
-    int len = sizeof(data)/sizeof(int);
+    int len = sizeof(data) / sizeof(int);
 
     dump(data, len);
     qsort(data, len);

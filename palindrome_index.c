@@ -3,7 +3,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
 
     int T;
     scanf("%d", &T);
@@ -18,13 +19,13 @@ int main() {
         int index = -1;
         for (int i = 0; i < len; ++i)
         {
-            if (S[i] != S[len-1-i])
+            if (S[i] != S[len - 1 - i])
             {
                 index = i;
 
-                int j=0, k=len-1;
+                int j = 0, k = len - 1;
 
-                while (j<len && k >=0)
+                while (j < len && k >= 0)
                 {
                     if (j == i)
                     {
@@ -40,7 +41,7 @@ int main() {
 
                     if (S[j] != S[k])
                     {
-                        index = len - 1 -index;
+                        index = len - 1 - index;
                         break;
                     }
 
@@ -53,9 +54,7 @@ int main() {
         }
 
         printf("%d\n", index);
-        
     }
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
 }
-

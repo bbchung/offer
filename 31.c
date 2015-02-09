@@ -25,7 +25,7 @@ int FindGreatestSumofSubArray(int *pData, int count)
 
 int main()
 {
-    int data[] = { -1, -2 };
+    int data[] = {-1, -2};
 
     int max = FindGreatestSumofSubArray(data, 2);
     printf("%d\n", max);

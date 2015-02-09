@@ -26,7 +26,7 @@ TreeNode *ToTree(int *pData, int begin, int end)
 
 int main(int argc, char *argv[])
 {
-    int arr[] = { 1, 2, 3, 4, 5 };
+    int arr[] = {1, 2, 3, 4, 5};
     TreeNode *root = ToTree(arr, 0, 4);
 
     printf("%d\n", root->value);

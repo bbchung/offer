@@ -13,12 +13,11 @@ void print_all_subset(int *A, int len, int *B, int len2, int index, int *c)
 
         return;
     }
-    print_all_subset(A, len, B, len2, index+1, c);
+    print_all_subset(A, len, B, len2, index + 1, c);
 
     B[len2] = A[index];
-    print_all_subset(A, len, B, len2+1, index+1, c);
+    print_all_subset(A, len, B, len2 + 1, index + 1, c);
 }
-
 
 
 int main()
@@ -31,4 +30,3 @@ int main()
 
     printf("%d\n", c);
 }
-

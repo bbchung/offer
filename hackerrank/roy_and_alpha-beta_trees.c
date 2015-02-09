@@ -10,18 +10,17 @@ typedef struct _Liking
     int liking;
 } Liking;
 
-int compare (const void * a, const void * b)
+int compare(const void *a, const void *b)
 {
-  return ( *(int*)a - *(int*)b );
+    return (*(int *)a - *(int *)b);
 }
-
 
 
 Liking count_liking(int *A, int root, int left, int left_size, int right, int right_size, int level, int alpha, int beta);
 
 Liking count_sum_liking(int *A, int offset, int num, int level, int alpha, int beta)
 {
-    Liking liking_sum={0,0};
+    Liking liking_sum = {0, 0};
 
     if (num == 0)
     {
@@ -37,7 +36,7 @@ Liking count_sum_liking(int *A, int offset, int num, int level, int alpha, int b
     {
         for (int i = offset; i < offset + num; ++i)
         {
-            Liking liking = count_liking(A, i, offset, i-offset, i + 1, num - (i+1-offset), level, alpha, beta);
+            Liking liking = count_liking(A, i, offset, i - offset, i + 1, num - (i + 1 - offset), level, alpha, beta);
             liking_sum.permulate += liking.permulate;
             liking_sum.liking += liking.liking;
         }
@@ -78,7 +77,7 @@ int main()
 
         int A[N];
 
-        qsort (A, N, sizeof(int), compare);
+        qsort(A, N, sizeof(int), compare);
 
         for (int j = 0; j < N; ++j)
             scanf("%d", A + j);

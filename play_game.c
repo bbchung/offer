@@ -26,7 +26,7 @@ int main()
         int N;
         scanf("%d", &N);
 
-        unsigned long long int *A = malloc(N * sizeof(unsigned long long int)); // value
+        unsigned long long int *A = malloc(N * sizeof(unsigned long long int));    // value
         unsigned long long int *StoN = malloc(N * sizeof(unsigned long long int)); // sum of index to N
         unsigned long long int *PtoN = malloc(N * sizeof(unsigned long long int)); // point of index to N;
 
@@ -39,35 +39,35 @@ int main()
             scanf("%llu", A + j);
         }
 
-        for (int j = N-1; j >= 0; j--)
+        for (int j = N - 1; j >= 0; j--)
         {
-            if (j == N-1)
+            if (j == N - 1)
             {
                 StoN[j] = A[j];
             }
             else
             {
-                StoN[j] = StoN[j+1] + A[j];
+                StoN[j] = StoN[j + 1] + A[j];
             }
 
-            if (j == N-1)
+            if (j == N - 1)
             {
                 PtoN[j] = A[j];
             }
-            else if (j == N-2 || j == N-3)
+            else if (j == N - 2 || j == N - 3)
             {
-                PtoN[j] = PtoN[j+1] + A[j];
+                PtoN[j] = PtoN[j + 1] + A[j];
             }
             else
             {
 
                 unsigned long long int p0 = A[j];
-                unsigned long long int p1 = p0 + A[j+1];
-                unsigned long long int p2 = p1 + A[j+2];
+                unsigned long long int p1 = p0 + A[j + 1];
+                unsigned long long int p2 = p1 + A[j + 2];
 
-                unsigned long long int i1 = p0 + StoN[j+1] - PtoN[j+1];
-                unsigned long long int i2 = p1 + StoN[j+2] - PtoN[j+2];
-                unsigned long long int i3 = p2 + StoN[j+3] - PtoN[j+3];
+                unsigned long long int i1 = p0 + StoN[j + 1] - PtoN[j + 1];
+                unsigned long long int i2 = p1 + StoN[j + 2] - PtoN[j + 2];
+                unsigned long long int i3 = p2 + StoN[j + 3] - PtoN[j + 3];
 
                 PtoN[j] = max3(i1, i2, i3);
             }

@@ -19,7 +19,7 @@ int main()
     for (int i = 0; i < m; ++i)
         scanf("%d", B + i);
 
-    int r[m+1][n+1][2];
+    int r[m + 1][n + 1][2];
 
     for (int i = 0; i <= m; ++i)
     {
@@ -55,12 +55,12 @@ int main()
         }
     }
 
-    int i=m,j=n;
+    int i = m, j = n;
 
-    int path[m+n];
-    int count=0;
+    int path[m + n];
+    int count = 0;
 
-    while(i >= 1 && j >=1)
+    while (i >= 1 && j >= 1)
     {
         if (r[i][j][1] == 0)
         {
@@ -68,7 +68,7 @@ int main()
         }
         else if (r[i][j][1] == 1)
         {
-            path[count++] = A[j-1];
+            path[count++] = A[j - 1];
             --i;
             --j;
         }
@@ -80,8 +80,7 @@ int main()
 
     for (int i = 0; i < count; ++i)
     {
-        printf("%d ", path[count-1-i]);
-        
+        printf("%d ", path[count - 1 - i]);
     }
     printf("\n");
 

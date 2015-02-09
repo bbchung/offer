@@ -23,7 +23,7 @@ int main()
         char c = upper_to_lower(buf[i]);
 
         if (c >= 'a' && c <= 'z')
-            record[c-'a'] = 1;
+            record[c - 'a'] = 1;
     }
 
     for (int i = 0; i < 26; ++i)

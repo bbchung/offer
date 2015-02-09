@@ -35,8 +35,8 @@ bool IsPopOrder(const int *push, const int *pop, int len)
 
 int main()
 {
-    int push[] = { 1, 2, 3, 4, 5 };
-    int pop[] = { 4, 5, 3, 2, 1 };
+    int push[] = {1, 2, 3, 4, 5};
+    int pop[] = {4, 5, 3, 2, 1};
 
     bool ret = IsPopOrder(push, pop, 5);
     printf("%d\n", ret);

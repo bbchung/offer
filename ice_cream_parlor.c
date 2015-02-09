@@ -18,17 +18,16 @@ int main()
         int A[N];
         memset(A, 0, N * sizeof(int));
         for (int j = 0; j < N; ++j)
-            scanf("%d", A+j);
+            scanf("%d", A + j);
 
         for (int j = 0; j < N; ++j)
         {
-            for (int k = j+1; k < N; ++k)
+            for (int k = j + 1; k < N; ++k)
             {
                 if (A[j] + A[k] == S)
-                    printf("%d %d\n", j+1, k+1);
+                    printf("%d %d\n", j + 1, k + 1);
             }
         }
-
     }
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;

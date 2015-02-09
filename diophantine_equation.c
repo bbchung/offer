@@ -9,9 +9,9 @@ int main()
     scanf("%d", &N);
 
     int r = 2;
-    for (int d=2; d<=N; ++d)
+    for (int d = 2; d <= N; ++d)
     {
-        if (d == r*r)
+        if (d == r * r)
         {
             r++;
             continue;
@@ -20,16 +20,16 @@ int main()
         int y = 1;
         while (1)
         {
-            char found=0;
-            for (y=1;y<=x;++y)
+            char found = 0;
+            for (y = 1; y <= x; ++y)
             {
-                if (x*x-d*y*y == 1)
+                if (x * x - d * y * y == 1)
                 {
                     found = 1;
                     break;
                 }
             }
-            
+
             if (found)
                 break;
 
@@ -39,7 +39,6 @@ int main()
         printf("%d\n", x);
     }
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     return 0;
 }
-

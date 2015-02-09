@@ -5,7 +5,7 @@ char FindFirstNotDupCharacter(char *str, unsigned int len)
     if (str == NULL || len == 0)
         return '\0';
 
-    int hash[256] = { 0 };
+    int hash[256] = {0};
 
     int i;
     for (i = 0; i < len; ++i)

@@ -106,7 +106,7 @@ int main()
         }
     }
 
-    unsigned long long ans=1;
+    unsigned long long ans = 1;
     for (int j = 0; j < i; ++j)
     {
         for (int k = 0; k < f[j]; ++k)
