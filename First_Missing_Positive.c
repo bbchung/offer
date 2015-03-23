@@ -7,16 +7,16 @@ int main()
 
     int A[N];
     for (int i = 0; i < N; ++i)
-        scanf("%d", A+i);
+        scanf("%d", A + i);
 
     int p = 0;
     while (p < N)
     {
-        if (A[p] != p+1 && A[p] - 1 < N && A[p] >= 1)
+        if (A[p] != p + 1 && A[p] - 1 < N && A[p] >= 1)
         {
             int temp = A[p];
-            A[p] = A[temp-1];
-            A[temp-1] = temp;
+            A[p] = A[temp - 1];
+            A[temp - 1] = temp;
         }
         else
         {
@@ -26,9 +26,9 @@ int main()
 
     for (int i = 0; i < N; ++i)
     {
-        if (A[i] != i+1)
+        if (A[i] != i + 1)
         {
-            printf("%d\n", i+1);
+            printf("%d\n", i + 1);
             return 0;
         }
     }

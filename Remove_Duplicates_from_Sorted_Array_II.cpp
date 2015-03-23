@@ -17,7 +17,7 @@ int main()
         V.push_back(v);
     }
 
-    if(V.size() <= 1)
+    if (V.size() <= 1)
         return 0;
 
     int c = 1;
@@ -28,7 +28,7 @@ int main()
 
     for (int i = 1; i < V.size(); ++i)
     {
-        if (V[i] == V[i-1])
+        if (V[i] == V[i - 1])
         {
             c++;
             if (c <= 2)

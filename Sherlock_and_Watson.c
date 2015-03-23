@@ -9,7 +9,7 @@ int main()
 
     int A[N];
     for (int i = 0; i < N; ++i)
-        scanf("%d", A+i);
+        scanf("%d", A + i);
 
     int offset = -K;
 

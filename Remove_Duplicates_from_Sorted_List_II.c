@@ -37,7 +37,7 @@ int main()
     Node *n = dummy->next;
 
     char dup = 0;
-    while (n != NULL) 
+    while (n != NULL)
     {
         if (pre != NULL)
         {
@@ -58,7 +58,7 @@ int main()
                 {
                     p = pre;
                 }
-                 
+
                 dup = 0;
             }
         }

@@ -15,12 +15,12 @@ int main()
         int A[N];
 
         for (int i = 0; i < N; ++i)
-            scanf("%d", A+i);
+            scanf("%d", A + i);
 
         int B[N];
         int pos = N;
 
-        for (int i = N-1; i >= 0; --i)
+        for (int i = N - 1; i >= 0; --i)
         {
             if (A[i] > K)
                 pos = i;
@@ -30,7 +30,7 @@ int main()
 
         int sum = 0;
         for (int i = 0; i < N; ++i)
-            sum += ((N-i) - (B[i]-i));
+            sum += ((N - i) - (B[i] - i));
 
         printf("%d\n", sum);
     }

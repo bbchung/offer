@@ -14,14 +14,14 @@ int count_unique_bst(int from, int to)
 
     int sum = 0;
     for (int i = from; i <= to; ++i)
-        sum += count_unique_bst(from, i-1) * count_unique_bst(i+1, to);
+        sum += count_unique_bst(from, i - 1) * count_unique_bst(i + 1, to);
 
     return sum;
 }
 
 int main()
 {
-    int c = count_unique_bst(1, 3); 
+    int c = count_unique_bst(1, 3);
 
     printf("%d\n", c);
 

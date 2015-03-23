@@ -16,7 +16,7 @@ Node *list_from_stdin(int len)
     for (int i = 0; i < len; ++i)
     {
         Node *n = new Node();
-        *n = {i+1, NULL};
+        *n = {i + 1, NULL};
         cin >> n->value;
 
         if (pre)

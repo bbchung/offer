@@ -49,7 +49,7 @@ int main()
         c++;
         p1 = p1->next;
 
-        if (c > n+1)
+        if (c > n + 1)
             p2 = p2->next;
     }
 
@@ -69,4 +69,3 @@ int main()
 
     printf("\n");
 }
-
