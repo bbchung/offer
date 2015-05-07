@@ -34,6 +34,6 @@ int countPrimes(int n)
 
 int main()
 {
-    int ret = countPrimes(3);
+    int ret = countPrimes(1500000);
     printf("%d\n", ret);
 }
