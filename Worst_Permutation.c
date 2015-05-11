@@ -24,6 +24,7 @@ int main()
         {
             ++p1;
             --p2;
+
             continue;
         }
 
